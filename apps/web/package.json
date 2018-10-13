@@ -1,29 +1,25 @@
 {
-  "name": "@cheffam/web",
+  "name": "cheffam",
   "version": "0.0.1",
   "private": true,
-  "main": "index.js",
-  "license": "MIT",
   "dependencies": {
-    "@types/next": "^7.0.1",
-    "@types/react": "^16.4.15",
-    "@types/react-dom": "^16.0.8",
-    "@zeit/next-typescript": "^1.1.1",
-    "next": "^7.0.1",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.0.4"
   },
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "i": "lerna add --scope=@cheffam/web"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "dotenv-load": "^1.1.0",
-    "next-compose-plugins": "^2.1.1",
-    "next-env": "^1.0.1",
-    "next-offline": "^3.0.2",
-    "next-plugin-transpile-modules": "^0.1.2"
-  }
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
