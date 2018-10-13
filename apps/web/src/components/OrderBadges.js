@@ -1,42 +1,76 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Badge from '@material-ui/core/Badge';
-import AppBar from '@material-ui/core/AppBar';
+import SwipeableViews from 'react-swipeable-views';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import PastOrdersList from './PastOrdersList';
+import CurrentOrderList from './CurrentOrderList';
 
-const styles = theme => ({
-  margin: {
-    margin: theme.spacing.unit * 2,
-  },
-  padding: {
-    padding: `0 ${theme.spacing.unit * 2}px`,
-  },
-});
-
-function SimpleBadge(props) {
-  const { classes } = props;
+function TabContainer({ children, dir }) {
   return (
-    <div>
-      <AppBar position="static" className={classes.margin}>
-        <Tabs value={0}>
-          <Tab
-            label={
-              <Badge className={classes.padding} color="secondary" badgeContent={4}>
-                Current
-              </Badge>
-            }
-          />
-          <Tab label="Past" />
-        </Tabs>
-      </AppBar>
-    </div>
+    <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
+      {children}
+    </Typography>
   );
 }
 
-SimpleBadge.propTypes = {
-  classes: PropTypes.object.isRequired,
+TabContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+  dir: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles)(SimpleBadge);
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+};
+
+class FullWidthTabs extends React.Component {
+  state = {
+    value: 0,
+  };
+
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
+
+  handleChangeIndex = index => {
+    this.setState({ value: index });
+  };
+
+  render() {
+    const { classes, theme } = this.props;
+
+    return (
+      <div className={classes.root}>
+          <Tabs
+            value={this.state.value}
+            onChange={this.handleChange}
+            indicatorColor="primary"
+            textColor="primary"
+            fullWidth
+          >
+            <Tab label="Current Order" />
+            <Tab label="Past Orders" />
+          </Tabs>
+        <SwipeableViews
+          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+          index={this.state.value}
+          onChangeIndex={this.handleChangeIndex}
+        >
+          <TabContainer dir={theme.direction}><CurrentOrderList /></TabContainer>
+          <TabContainer dir={theme.direction}><PastOrdersList /></TabContainer>
+        </SwipeableViews>
+      </div>
+    );
+  }
+}
+
+FullWidthTabs.propTypes = {
+  classes: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles, { withTheme: true })(FullWidthTabs);

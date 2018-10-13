@@ -4,6 +4,7 @@ import { ApolloProvider } from "react-apollo"
 import Router from "react-router-dom/BrowserRouter"
 import initApollo from "../lib/initApollo"
 import Pages from "../pages"
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const client = initApollo()
 
@@ -18,6 +19,7 @@ class App extends Component {
         <ApolloProvider client={client}>
           <Router>
             <>  {/* React fragment used for storing multiple components */}
+            <CssBaseline />
             <Pages />
             </>
           </Router>
