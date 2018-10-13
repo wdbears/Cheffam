@@ -3,6 +3,6 @@ import MediaCard from "../components/FoodCategoryTile"
 
 const HomePage = () => <>
 <h1>Hello Cheffam</h1>
-<MediaCard></MediaCard></>
+<MediaCard /></>
 
 export default HomePage
