@@ -1,17 +1,13 @@
 import { GraphQLServer } from "graphql-yoga"
+import { makeExecutableSchema } from 'graphql-tools';
 
-const typeDefs = `
-  type Query {
-    hello(name: String): String!
-  }
-`
+import typeDefs from "./schemas"
+import resolvers from "./resolvers"
 
-// hello
-const resolvers = {
-  Query: {
-    hello: (_, { name }) => `Hello ${name || "World"}`
-  }
-}
+const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers
+})
 
-const server = new GraphQLServer({ typeDefs, resolvers })
+const server = new GraphQLServer({ schema })
 server.start(() => console.log("Server is running on http://localhost:4000"))
