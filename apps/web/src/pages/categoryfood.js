@@ -1,11 +1,10 @@
 import React from "react"
-import ChefCards from "../components/ChefCards";
-import CategoryPage from "../components/CategoryPage";
+import GridLayout from "../components/GridLayout";
 
 
 const OrderPage = () => 
 <div>
-    <CategoryPage />
+    <GridLayout />
 </div>
 
 export default OrderPage

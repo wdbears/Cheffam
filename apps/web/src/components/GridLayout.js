@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card'; 
-import ChefCards from '../components/ChefCards';
+import ChefCards from './ChefCards';
 
 const styles = theme => ({
   root: {
