@@ -8,6 +8,5 @@ export default () => (
     <Route path="/" exact component={HomePage} />
     <Route path="/orders" component={OrderPage} />
     <Route path="/settings" component={SettingsPage} />
-    
   </Switch>
 )
