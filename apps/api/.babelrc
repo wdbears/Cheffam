@@ -3,6 +3,7 @@
         "backpack-core/babel"
     ],
     "plugins": [
-        "import-graphql"
+        "import-graphql",
+        "inline-dotenv"
     ]
 }
