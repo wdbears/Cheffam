@@ -1,6 +1,17 @@
 import React from "react"
+import { withStyles } from '@material-ui/core/styles';
+import Profile from "../components/Profile";
 import SettingsList from "../components/SettingsList";
 
-const SettingsPage = () => <div><SettingsList /></div>
+const styles = {
+page: {
+    display: 'flex',
+    justifyContent: 'center'
+  }
+}
 
-export default SettingsPage
+const SettingsPage = ({classes}) => (
+    <div className="classes.page"><Profile /><SettingsList /></div>
+)
+
+export default withStyles(styles)(SettingsPage);
