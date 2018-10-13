@@ -4,8 +4,6 @@ import { ApolloProvider } from "react-apollo"
 import Router from "react-router-dom/BrowserRouter"
 import initApollo from "../lib/initApollo"
 import Pages from "../pages"
-import BottomNav from "../components/BottomNav";
-import SettingsList from "../components/SettingsList";
 
 const client = initApollo()
 
@@ -17,8 +15,6 @@ class App extends Component {
           <Router>
             <>  {/* React fragment used for storing multiple components */}
             <Pages />
-            <SettingsList />
-            <BottomNav />
             </>
           </Router>
         </ApolloProvider>

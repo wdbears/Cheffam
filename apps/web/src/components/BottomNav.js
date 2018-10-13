@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import HomeIcon from '@material-ui/icons/Home';
+import ReceiptIcon from '@material-ui/icons/Receipt';
+import PersonIcon from '@material-ui/icons/Person';
 
 const styles = {
   root: {
@@ -33,9 +33,9 @@ class SimpleBottomNavigation extends React.Component {
         showLabels
         className={classes.root}
       >
-        <BottomNavigationAction label="Home" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Orders" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Profile" icon={<LocationOnIcon />} />
+        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction label="Orders" icon={<ReceiptIcon />} />
+        <BottomNavigationAction label="Profile" icon={<PersonIcon />} />
       </BottomNavigation>
     );
   }

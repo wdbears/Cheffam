@@ -7,6 +7,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HelpIcon from '@material-ui/icons/HelpOutline';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import PaymentIcon from '@material-ui/icons/Payment';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 const styles = theme => ({
   root: {
@@ -28,21 +30,22 @@ function SimpleList(props) {
           <ListItemText primary="Favorites" />
         </ListItem>
         <ListItem button>
+          <ListItemIcon> 
+            <PaymentIcon />
+          </ListItemIcon>
+          <ListItemText primary="Payment" />
+        </ListItem>
+        <ListItem button>
         <ListItemIcon>
             <HelpIcon />
           </ListItemIcon>
           <ListItemText primary="Help" />
         </ListItem>
         <ListItem button>
-          <ListItemIcon> 
-          </ListItemIcon>
-          <ListItemText primary="Inbox" />
-        </ListItem>
-        <ListItem button>
         <ListItemIcon>
-            <HelpIcon />
+            <SettingsIcon />
           </ListItemIcon>
-          <ListItemText primary="Drafts" />
+          <ListItemText primary="Settings" />
         </ListItem>
       </List>
     </div>
