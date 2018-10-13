@@ -1,22 +1,17 @@
 import React from "react"
-import { withStyles } from '@material-ui/core/styles';
 import Profile from "../components/Profile";
 import SettingsList from "../components/SettingsList";
+import Toggle from "../components/Toggle";
 
-const styles = {
-html: {
-    display: 'flex',
-    paddingTop: 100
- }
-}
 
 const SettingsPage = ({classes}) => (
     <div className="pageContainer">
     <>
         <Profile />
         <SettingsList />
+        <Toggle />
     </>
     </div>
 )
 
-export default withStyles(styles)(SettingsPage);
+export default (SettingsPage);
