@@ -10,7 +10,6 @@
     "@types/react-dom": "^16.0.8",
     "@zeit/next-typescript": "^1.1.1",
     "next": "^7.0.1",
-    "@ramen_stack/test": "*",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
@@ -18,7 +17,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "i": "lerna add --scope=@ramen_stack/web"
+    "i": "lerna add --scope=@cheffam/web"
   },
   "devDependencies": {
     "next-plugin-transpile-modules": "^0.1.2"

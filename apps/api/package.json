@@ -10,7 +10,6 @@
     "typescript": "^3.1.1"
   },
   "dependencies": {
-    "@ramen_stack/test": "*",
     "graphql-yoga": "^1.16.2"
   },
   "scripts": {
@@ -18,6 +17,6 @@
     "build": "tsc",
     "start": "node ./dist/server.js",
     "prod": "npm run build && npm run start",
-    "i": "lerna add --scope=@ramen_stack/api"
+    "i": "lerna add --scope=@cheffam/api"
   }
 }
