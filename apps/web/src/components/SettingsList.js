@@ -13,7 +13,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 const styles = theme => ({
   root: {
     width: '100%',
-    maxWidth: 360,
+    margin: 0,
     backgroundColor: theme.palette.background.paper,
   },
 });

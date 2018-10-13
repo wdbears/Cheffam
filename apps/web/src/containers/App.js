@@ -7,10 +7,14 @@ import Pages from "../pages"
 
 const client = initApollo()
 
+const appStyle = {
+  paddingTop: '20px'
+}
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" style={appStyle}>
         <ApolloProvider client={client}>
           <Router>
             <>  {/* React fragment used for storing multiple components */}

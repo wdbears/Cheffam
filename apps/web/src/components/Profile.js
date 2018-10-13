@@ -9,14 +9,18 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import GeoffreyPfp from '../images/geoffrey.png';
 
 const styles = {
-  avatar: {
-    margin: 10,
-  },
-  bigAvatar: {
-    width: 60,
-    height: 60,
-  },
-};
+    row: {
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    avatar: {
+      margin: 10,
+    },
+    bigAvatar: {
+      width: 100,
+      height: 100,
+    },
+  };
 
 function ImageAvatars(props) {
   const { classes } = props;

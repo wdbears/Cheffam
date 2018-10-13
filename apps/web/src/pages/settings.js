@@ -4,14 +4,19 @@ import Profile from "../components/Profile";
 import SettingsList from "../components/SettingsList";
 
 const styles = {
-page: {
+html: {
     display: 'flex',
-    justifyContent: 'center'
-  }
+    paddingTop: 100
+ }
 }
 
 const SettingsPage = ({classes}) => (
-    <div className="classes.page"><Profile /><SettingsList /></div>
+    <div className="pageContainer">
+    <>
+        <Profile />
+        <SettingsList />
+    </>
+    </div>
 )
 
 export default withStyles(styles)(SettingsPage);
