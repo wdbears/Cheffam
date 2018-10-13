@@ -17,8 +17,6 @@ class App extends Component {
           <Router>
             <>  {/* React fragment used for storing multiple components */}
             <Pages />
-            <SettingsList />
-            <BottomNav />
             </>
           </Router>
         </ApolloProvider>
