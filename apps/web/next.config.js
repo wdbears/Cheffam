@@ -7,4 +7,4 @@ const dotenvLoad = require("dotenv-load")
 
 dotenvLoad()
 
-module.exports = withPlugins([nextEnv(), withOffline(), withTypescript()])
+module.exports = withPlugins([nextEnv(), withTypescript()])
