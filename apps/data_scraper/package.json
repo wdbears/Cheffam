@@ -1,0 +1,17 @@
+{
+  "name": "@cheffam/data_scraper",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "src/index.js",
+  "devDependencies": {
+    "backpack-core": "^0.8.0-0",
+    "node-fetch": "^2.2.0"
+  },
+  "scripts": {
+    "dev": "backpack",
+    "start": "node ."
+  },
+  "dependencies": {
+    "jsonfile": "^5.0.0"
+  }
+}
