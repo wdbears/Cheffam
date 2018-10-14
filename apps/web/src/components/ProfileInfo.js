@@ -20,13 +20,14 @@ const styles = {
 
 function ImageAvatars(props) {
   const { classes } = props;
+  console.log(classes);
   return (
       <>
       <div className={classes.row}>
       </div>
       <div className={classes.wrapper}>
       <div className="name">
-        Geoffrey the Giraffe
+        {props.name}
       </div>
       <div className="rating">
         <StarIcon /><StarIcon /><StarIcon /><StarHalfIcon /><StarBorderIcon />

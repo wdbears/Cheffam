@@ -26,14 +26,14 @@ const styles = theme => ({
   }
 })
 
-function MediaCard({ classes, imgSrc }) {
+function MediaCard({ classes, imgSrc, textSrc}) {
   return (
     <Card className={classes.card}>
     <CardActionArea style={{ width: "100%"}}
     component={Link}
     label="Chef Profile"
     to="/chefProfile">
-      <CardHeader avatar={<ImageAvatars />} title={<ProfileInfo />} />
+      <CardHeader avatar={<ImageAvatars />} title={<ProfileInfo name={textSrc} />} />
       <CardMedia className={classes.media} image={imgSrc} />
       </CardActionArea>
     </Card>
