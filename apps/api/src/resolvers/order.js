@@ -18,7 +18,9 @@ let orders =
                 price: 8.99
             }
         ],
-        totalPrice: 17.98
+        totalPrice: 17.98,
+        tax : 0,
+        totalAfterTax: 0
     },
     {
         id: 1,
@@ -33,7 +35,9 @@ let orders =
                 price: 3.00
             }
         ],
-        totalPrice: 11.00
+        totalPrice: 11.00,
+        tax : 0,
+        totalAfterTax: 0
     },
     {
         id: 2,
@@ -48,7 +52,9 @@ let orders =
                 price: 2.00
             }
         ],
-        totalPrice: 7.00
+        totalPrice: 7.00,
+        tax : 0,
+        totalAfterTax: 0
     },
     {
         id: 3,
@@ -63,7 +69,9 @@ let orders =
                 price: 2.00
             }
         ],
-        totalPrice: 4.00
+        totalPrice: 4.00,
+        tax : 0,
+        totalAfterTax: 0
     }
 ]
 
@@ -72,6 +80,8 @@ for(let i = 0; i < 4; i++){
     obj.id = orders[i].id;
     obj.dishes = orders[i].dishes;
     obj.totalPrice = orders[i].totalPrice;
+    obj.tax = 0.09 * obj.totalPrice;
+    obj.totalAfterTax = obj.totalPrice + obj.tax;
     mockOrders.push(obj);
 }
 

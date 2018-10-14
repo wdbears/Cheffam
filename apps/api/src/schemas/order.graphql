@@ -2,6 +2,8 @@ type Order{
     id: ID!
     dishes: [Dish]!
     totalPrice: Float!
+    tax: Float!
+    totalAfterTax: Float!
 }
 
 extend type Query{
