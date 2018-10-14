@@ -3,10 +3,16 @@ import PropTypes from "prop-types"
 import { withStyles } from "@material-ui/core/styles"
 import Card from "@material-ui/core/Card"
 import CardContent from "@material-ui/core/CardContent"
+import CardActionArea from "@material-ui/core/CardActionArea"
 import Typography from "@material-ui/core/Typography"
+import Modal from '@material-ui/core/Modal';
 
 import gql from "graphql-tag"
 import { Query } from "react-apollo"
+
+function randTime() {
+  return Math.round(Math.random() * 20) - 10;
+}
 
 const GET_ORDERS = gql`
   {
@@ -19,7 +25,8 @@ const GET_ORDERS = gql`
 
 const styles = {
   card: {
-    minWidth: 275
+    minWidth: 275,
+    marginBottom: 10
   },
   bullet: {
     display: "inline-block",
@@ -46,6 +53,8 @@ function SimpleCard(props) {
           allOrders.map(({ totalPrice, id }, i) => (
             <Card className={classes.card} key={i}>
               {console.log(allOrders)}
+              <CardActionArea
+                style={{ width: "100%"}}>
               <CardContent>
                 <Typography variant="h5" component="h2">
                   Order #{12345 + id}
@@ -55,6 +64,7 @@ function SimpleCard(props) {
                   Order total: ${totalPrice}
                 </Typography>
               </CardContent>
+              </CardActionArea>
             </Card>
           ))
         )
