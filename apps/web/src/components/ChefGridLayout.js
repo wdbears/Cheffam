@@ -3,12 +3,12 @@ import Grid from "@material-ui/core/Grid"
 import ChefCards from "./ChefCards"
 import MalaysianFood from "../images/malaysian.jpg"
 import IndianFood from "../images/indian.jpg"
-// import KoreanFood from "../images/korean.jpg"
-// import ChineseFood from "../images/chinese.jpg"
-// import JapaneseFood from "../images/japanese.jpg"
-// import VietFood from "../images/vietnamese.jpg"
-// import AmericanFood from "../images/homemadesteak.jpg"
-// import Mac from "../images/americanhomemade.jpg"
+import KoreanFood from "../images/korean.jpg"
+import ChineseFood from "../images/chinese.jpg"
+import JapaneseFood from "../images/japanese.jpg"
+import VietFood from "../images/vietnamese.jpg"
+import AmericanFood from "../images/homemadesteak.jpg"
+import Mac from "../images/americanhomemade.jpg"
 
 import gql from "graphql-tag"
 import { Query } from "react-apollo"
@@ -24,7 +24,10 @@ const GET_CHEFS = gql`
   }
 `
 
+
+
 function CenteredGrid(props) {
+  const array = [MalaysianFood, IndianFood, AmericanFood, KoreanFood, ChineseFood, JapaneseFood, VietFood, Mac];
   return (
     <div>
       <Grid container spacing={16} alignContent="center">
@@ -39,8 +42,8 @@ function CenteredGrid(props) {
               allUsers.map(({ id, firstName, lastName, chefRating }, i) => (
                 <Grid item key={i} xs={12} sm={6} md={4} lg={3}>
                   <ChefCards
-                    imgSrc={i % 3 === 0 ? IndianFood : MalaysianFood}
-                    textSrc={`${firstName} ${lastName}`}
+                    imgSrc={array[i % 8]}
+                    textSrc={` ${firstName} ${lastName}`}
                   />
                 </Grid>
               ))

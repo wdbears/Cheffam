@@ -22,10 +22,10 @@ const styles = {
   }
 }
 
-function MediaCard({ classes, imgSrc }) {
+function MediaCard({ classes, imgSrc, textSrc}) {
   return (
     <Card className={classes.card}>
-      <CardHeader avatar={<ImageAvatars />} title={<ProfileInfo />} />
+      <CardHeader avatar={<ImageAvatars />} title={<ProfileInfo name={textSrc}/>} />
       <CardMedia className={classes.media} image={imgSrc} />
     </Card>
   )
