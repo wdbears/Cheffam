@@ -28,7 +28,7 @@ const ProfilePage = ({classes}) => (
         <Toggle />
         </div>
         <div className={classes.application}>
-          Apply for Chef Role. Coming soon!
+          Application for Chef Role is coming soon!
         </div>
     </>
     </div>
