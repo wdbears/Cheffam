@@ -1,4 +1,4 @@
-import User from '../schemas/user.graphql'
+//import User from '../schemas/user.graphql'
 const casual = require('casual');
 
 let mockUsers = [];
