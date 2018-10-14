@@ -1,0 +1,14 @@
+type User{
+    id: ID!
+    firstName: String!
+    lastName: String!
+    fudieRating: Float!
+    chefRating: Float!
+    favoriteChefs: [User]!
+    isChef: Boolean!
+    blurb: String    
+}
+
+extend type Query{
+    allUsers: [User]!
+}
