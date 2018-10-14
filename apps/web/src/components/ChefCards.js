@@ -31,7 +31,7 @@ function MediaCard({ classes, imgSrc}) {
           avatar={
             <ImageAvatars />
           }
-          title="Shrimp and Chorizo Paella"
+          title={<ProfileName/>}
         />
         <CardMedia
           className={classes.media}
