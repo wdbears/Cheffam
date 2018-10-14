@@ -11,4 +11,5 @@ type User{
 
 extend type Query{
     allUsers: [User]!
+    #allChefs: [User]!
 }

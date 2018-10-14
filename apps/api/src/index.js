@@ -25,9 +25,6 @@ const initApp = async () => {
       fudieRating: casual.double(3.75,5),
       chefRating: casual.double(3.75,5)
     }),
-
-    
-    
   }
   addMockFunctionsToSchema({ schema, mocks });
 
