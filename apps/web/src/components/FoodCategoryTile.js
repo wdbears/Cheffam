@@ -5,6 +5,8 @@ import Card from "@material-ui/core/Card"
 import CardActionArea from "@material-ui/core/CardActionArea"
 import CardMedia from "@material-ui/core/CardMedia"
 import Typography from "@material-ui/core/Typography"
+import { Link } from "react-router-dom"
+
 
 const styles = {
   media: {
@@ -21,8 +23,10 @@ function MediaCard({ classes, imgSrc, textSrc }) {
   return (
     <Card className={classes.card}>
       <CardActionArea
-        style={{ width: "100%", backgroundColor: "rgba(0,0,0,.6)" }}
-      >
+        style={{ width: "100%"}}
+        component={Link}
+        label="Chef List"
+        to="/chefList">
         <CardMedia
           className={classes.media}
           style={{ display: "flex", justifyContent: "center" }}
