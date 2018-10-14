@@ -5,6 +5,7 @@ import Logo from "../logo.svg"
 const styles = {
     appLogo: {width:50, paddingTop: 20},
     greeting: {textAlign: 'center'},
+    gridStuff: {paddingBottom: 50}
 }
 
 const HomePage = ({ classes }) => <>
@@ -13,7 +14,7 @@ const HomePage = ({ classes }) => <>
     <h1>Welcome to Cheffam</h1>
     <h4>A freelance cook's dream.</h4>
 </div>
-<div>
+<div className={classes.gridStuff}>
 <GridLayout className={classes.chefGrid} />
 </div>
 </>

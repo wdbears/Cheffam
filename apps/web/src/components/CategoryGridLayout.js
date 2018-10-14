@@ -17,11 +17,6 @@ import JapaneseFood from "../images/japanese.jpg"
 import VietFood from "../images/vietnamese.jpg"
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    paddingLeft: 100,
-    paddingRight: 100
-  },
   Grid: {
     alignItems: "center",
     justify: "center"
