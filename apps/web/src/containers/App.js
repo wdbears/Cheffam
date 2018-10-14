@@ -17,6 +17,9 @@ const styles = {
     position: "fixed",
     bottom: 0,
     width: "100%"
+  },
+  main: {
+    marginBottom: "70px"
   }
 }
 
@@ -26,7 +29,7 @@ class App extends Component {
       <div className={this.props.classes.app}>
         <Router>
           <ApolloProvider client={client}>
-            <main>
+            <main className={this.props.classes.main}>
               <CssBaseline />
               <Pages />
             </main>
