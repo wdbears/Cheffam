@@ -14,7 +14,7 @@ const initApp = async () => {
     typeDefs,
     resolvers
   })
-
+  /*
   const mocks = {
     Query: () => ({
       allUsers: () => new MockList(8)
@@ -26,8 +26,8 @@ const initApp = async () => {
       chefRating: casual.double(3.75,5)
     }),
   }
-  addMockFunctionsToSchema({ schema, mocks });
-
+  addMockFunctionsToSchema({ schema, mock });
+  */
   const server = new GraphQLServer({ schema, context })
   server.start(() => console.log("Server is running on http://localhost:4000"))
 
