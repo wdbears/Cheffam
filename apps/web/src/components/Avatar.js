@@ -2,15 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import StarIcon from '@material-ui/icons/Star';
-import StarHalfIcon from '@material-ui/icons/StarHalf';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
+import Avatar from '@material-ui/core/Avatar';
+import GeoffreyPfp from '../images/geoffrey.png';
 
 const styles = {
     row: {
       display: 'flex',
       justifyContent: 'center',
-    }
+    },
+    avatar: {
+      margin: 10,
+    },
+    bigAvatar: {
+      width: 100,
+      height: 100,
+    },
   };
 
 function ImageAvatars(props) {
@@ -18,12 +24,10 @@ function ImageAvatars(props) {
   return (
       <>
       <div className={classes.row}>
-      </div>
-      <div className="name">
-        Geoffrey the Giraffe
-      </div>
-      <div className="rating">
-        <StarIcon /><StarIcon /><StarIcon /><StarHalfIcon /><StarBorderIcon />
+        <Avatar
+            src={GeoffreyPfp}
+            className={classNames(classes.avatar, classes.bigAvatar)}
+        />
       </div>
     </>
   );
