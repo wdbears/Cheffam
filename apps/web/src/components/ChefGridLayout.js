@@ -7,8 +7,8 @@ import ChefCards from './ChefCards';
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    paddingLeft: 10,
-    paddingRight: 10
+    paddingLeft: 100,
+    paddingRight: 100
   },
   Grid: {
     alignItems: "center",
@@ -21,8 +21,8 @@ function CenteredGrid(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={40} xs={12} sm={12} md={8} lg={6}>
-      <Grid item xs={6} sm={3}>
+      <Grid container spacing={40} xs={12} sm={12} md={12} lg={12}>
+        <Grid item xs={6} sm={3}>
             <ChefCards />
         </Grid>
         <Grid item xs={6} sm={3}>
