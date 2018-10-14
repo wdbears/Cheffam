@@ -1,6 +1,6 @@
 import React from "react"
 import Avatar from "../components/Avatar";
-import Profile from "../components/Profile";
+import ProfileName from "../components/ProfileName";
 import { withStyles } from '@material-ui/core/styles';
 import SettingsList from "../components/SettingsList";
 import Toggle from "../components/ChefModeToggle";
@@ -12,15 +12,15 @@ const styles = {
       }
     }
 
-const SettingsPage = ({classes}) => (
+const ProfilePage = ({classes}) => (
     <div className="classes.page">
     <>
         <Avatar />
-        <Profile />
+        <ProfileName />
         <SettingsList />
         <Toggle />
     </>
     </div>
 )
 
-export default withStyles(styles)(SettingsPage);
+export default withStyles(styles)(ProfilePage);
