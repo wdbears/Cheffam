@@ -1,11 +1,8 @@
 import { GraphQLServer } from "graphql-yoga"
 import { makeExecutableSchema } from 'graphql-tools';
-import { addMockFunctionsToSchema } from 'graphql-tools';
-import { MockList } from 'graphql-tools';
 import typeDefs from "./schemas"
 import resolvers from "./resolvers"
 import initMongo from "./lib/initMongo"
-import casual from "casual"
 
 const initApp = async () => {
   const { db, con } = await initMongo()

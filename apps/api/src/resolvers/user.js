@@ -14,8 +14,8 @@ const users = [
     },
     {
         id: 1,
-        firstName: "Martin",
-        lastName: "Hernandez",
+        firstName: "Ikram",
+        lastName: "Gupta",
         fudieRating: 4.83,
         chefRating: 4.92,
         isChef: true,
@@ -24,7 +24,7 @@ const users = [
     {
         id: 2,
         firstName: "Emily",
-        lastName: "Zhu",
+        lastName: "Patel",
         fudieRating: 4.99,
         chefRating: 5.00,
         isChef: true,
@@ -32,7 +32,7 @@ const users = [
     }
 ];
 
-for(let i = 3; i < 8; i++){
+for(let i = 3; i < 15; i++){
     let obj = {};
     obj.id = i;
     obj.firstName = casual.first_name;
