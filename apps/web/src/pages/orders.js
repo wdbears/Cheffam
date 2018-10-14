@@ -1,7 +1,6 @@
 import React from "react"
-import OrderBadges from "../components/OrderBadges";
+import OrderBadges from "../components/OrderBadges"
 
-
-const OrderPage = () => <div><OrderBadges /></div>
+const OrderPage = () => <OrderBadges />
 
 export default OrderPage
