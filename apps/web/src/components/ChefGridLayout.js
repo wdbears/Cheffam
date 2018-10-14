@@ -1,6 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { withStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 import ChefCards from "./ChefCards"
 import AmericanFood from "../images/homemadesteak.jpg"
@@ -12,24 +10,10 @@ import ChineseFood from "../images/chinese.jpg"
 import JapaneseFood from "../images/japanese.jpg"
 import VietFood from "../images/vietnamese.jpg"
 
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    paddingLeft: 100,
-    paddingRight: 100
-  },
-  Grid: {
-    alignItems: "center",
-    justify: "center"
-  }
-})
-
 function CenteredGrid(props) {
-  const { classes } = props
-
   return (
-    <div className={classes.root}>
-      <Grid container spacing={40}>
+    <div>
+      <Grid container spacing={16} alignContent="center">
         {[
           { img: AmericanFood, text: "Chef Bob" },
           { img: MalaysianFood, text: "Chef Ahmad" },
@@ -49,8 +33,4 @@ function CenteredGrid(props) {
   )
 }
 
-CenteredGrid.propTypes = {
-  classes: PropTypes.object.isRequired
-}
-
-export default withStyles(styles)(CenteredGrid)
+export default CenteredGrid
