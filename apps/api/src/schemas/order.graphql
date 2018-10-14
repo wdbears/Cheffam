@@ -1,0 +1,9 @@
+type Order{
+    id: ID!
+    dishes: [Dish]!
+    totalPrice: Float!
+}
+
+extend type Query{
+    allOrders: [Order]!
+}
