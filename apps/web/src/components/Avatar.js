@@ -14,9 +14,13 @@ const styles = {
       margin: 10,
     },
     bigAvatar: {
-      width: 100,
-      height: 100,
+      width: 60,
+      height: 60,
     },
+    smallAvatar: {
+      width: 75,
+      height: 75
+    }
   };
 
 function ImageAvatars(props) {

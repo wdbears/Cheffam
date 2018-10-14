@@ -4,38 +4,41 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { withStyles } from '@material-ui/core/styles';
 import CardMedia from '@material-ui/core/CardMedia';
-import Typography from "@material-ui/core/Typography"
+import CardHeader from "@material-ui/core/CardHeader";
+import CardContent from '@material-ui/core/CardContent'
+import ProfileName from "../components/ProfileName";
+import ImageAvatars from "../components/Avatar"
 
 const styles = {
   card: {
     maxWidth: 345,
-    minWidth: 175,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    minWidth: 210,
   },
   media: {
     height: 140,
   },
   cardTitle: {
     color: 'white',
-    fontSize: 26,
+    fontSize: 14,
     alignSelf: "center"
   }
 };
 
-function MediaCard({ classes, imgSrc, textSrc }) {
+function MediaCard({ classes, imgSrc}) {
   return (
     <Card className={classes.card}>
-      <CardActionArea style={{ width: "100%" }}>
+        <CardHeader
+          avatar={
+            <ImageAvatars />
+          }
+          title="Shrimp and Chorizo Paella"
+        />
         <CardMedia
           className={classes.media}
-          style={{ display: "flex", justifyContent: "center" }}
           image={imgSrc}
           title="Contemplative Reptile"
-        >
-          <Typography className={classes.cardTitle}>{textSrc}</Typography>
-        </CardMedia>
-      </CardActionArea>
-    </Card>
+        />
+      </Card>
   );
 }
 
