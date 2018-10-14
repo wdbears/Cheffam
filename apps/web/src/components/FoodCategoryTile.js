@@ -6,19 +6,12 @@ import CardActionArea from "@material-ui/core/CardActionArea"
 import CardMedia from "@material-ui/core/CardMedia"
 import Typography from "@material-ui/core/Typography"
 
-
-
 const styles = {
-  card: {
-    maxWidth: 345,
-    minWidth: 250,
-    margin: 50,
-    },
   media: {
     height: 150
   },
   cardTitle: {
-    color: 'white',
+    color: "white",
     fontSize: 26,
     alignSelf: "center"
   }
@@ -27,7 +20,9 @@ const styles = {
 function MediaCard({ classes, imgSrc, textSrc }) {
   return (
     <Card className={classes.card}>
-      <CardActionArea style={{ width: "100%", backgroundColor: 'rgba(0,0,0,.6)'}}>
+      <CardActionArea
+        style={{ width: "100%", backgroundColor: "rgba(0,0,0,.6)" }}
+      >
         <CardMedia
           className={classes.media}
           style={{ display: "flex", justifyContent: "center" }}
