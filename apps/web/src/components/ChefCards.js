@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardHeader from "@material-ui/core/CardHeader";
 import ImageAvatars from "../components/Avatar"
+import ProfileInfo from './ProfileInfo';
 
 const styles = {
   card: {
@@ -28,7 +29,7 @@ function MediaCard({ classes, imgSrc}) {
           avatar={
             <ImageAvatars />
           }
-          title={<ProfileName/>}
+          title={<ProfileInfo/>}
         />
         <CardMedia
           className={classes.media}
