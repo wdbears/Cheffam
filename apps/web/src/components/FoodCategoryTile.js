@@ -8,7 +8,10 @@ import Typography from "@material-ui/core/Typography"
 import { Link } from "react-router-dom"
 
 
-const styles = {
+const styles = theme => ({
+  card: {
+    boxShadow: theme.shadows[6]
+  },
   media: {
     height: 150
   },
@@ -17,7 +20,7 @@ const styles = {
     fontSize: 26,
     alignSelf: "center"
   }
-}
+})
 
 function MediaCard({ classes, imgSrc, textSrc }) {
   return (

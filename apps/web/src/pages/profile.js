@@ -12,6 +12,9 @@ const styles = {
       chefToggle: {
           paddingTop:30,
           textAlign:'center'
+      },
+      application: {
+          textAlign: 'center'
       }
     }
 
@@ -23,6 +26,9 @@ const ProfilePage = ({classes}) => (
         <SettingsList />
         <div className={classes.chefToggle}>
         <Toggle />
+        </div>
+        <div className={classes.application}>
+          Apply for Chef Role. Coming soon!
         </div>
     </>
     </div>

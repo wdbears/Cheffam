@@ -10,10 +10,11 @@ import ProfileInfo from "./ProfileInfo"
 import { Link } from "react-router-dom"
 
 
-const styles = {
+const styles = theme => ({
   card: {
     // maxWidth: 345,
     // minWidth: 210
+    boxShadow: theme.shadows[6]
   },
   media: {
     height: 140
@@ -23,7 +24,7 @@ const styles = {
     fontSize: 14,
     alignSelf: "center"
   }
-}
+})
 
 function MediaCard({ classes, imgSrc }) {
   return (

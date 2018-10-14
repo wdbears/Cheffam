@@ -23,10 +23,11 @@ const GET_ORDERS = gql`
   }
 `
 
-const styles = {
+const styles = theme => ({
   card: {
     minWidth: 275,
-    marginBottom: 10
+    marginBottom: 10,
+    boxShadow: theme.shadows[2]
   },
   bullet: {
     display: "inline-block",
@@ -39,7 +40,7 @@ const styles = {
   pos: {
     marginBottom: 12
   }
-}
+})
 
 function SimpleCard(props) {
   const { classes } = props
