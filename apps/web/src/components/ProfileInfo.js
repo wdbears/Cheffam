@@ -7,9 +7,14 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 const styles = {
     row: {
+      paddingTop:15,
       display: 'flex',
       align: 'center',
       justifyContent: 'center',
+    },
+    wrapper: {
+      textAlign: 'center',
+      paddingBottom: 30
     }
   };
 
@@ -19,11 +24,13 @@ function ImageAvatars(props) {
       <>
       <div className={classes.row}>
       </div>
+      <div className={classes.wrapper}>
       <div className="name">
         Geoffrey the Giraffe
       </div>
       <div className="rating">
         <StarIcon /><StarIcon /><StarIcon /><StarHalfIcon /><StarBorderIcon />
+      </div>
       </div>
     </>
   );
