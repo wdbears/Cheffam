@@ -9,9 +9,6 @@ import PersonIcon from '@material-ui/icons/Person';
 import SearchIcon from '@material-ui/icons/Search';
 
 const styles = {
-  root: {
-    width: 500,
-  },
 };
 
 class SimpleBottomNavigation extends React.Component {

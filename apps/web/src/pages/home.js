@@ -1,13 +1,17 @@
 import React from "react"
-import MediaCard from "../components/FoodCategoryTile"
-import AmericanFood from "../images/american.jpg"
-import HalalFood from "../images/halal.jpg"
+import GridLayout from "../components/ChefGridLayout";
+import { withStyles } from "@material-ui/core/styles"
 
-const HomePage = () => <>
-<h1>Welcome to Cheffam</h1>
-<h4>A freelance cook's dream.</h4>
-{[ {img: AmericanFood, text: "American"}, {img: HalalFood, text: "Halal"} ].map(({ img, text }) => <MediaCard imgSrc={img} textSrc={text} />)}
+const styles = {
+    greeting: {textAlign: 'center'}
+}
+
+const OrderPage = ({ classes }) => <>
+<div className={classes.greeting}>
+    <h1>Welcome to Cheffam</h1>
+    <h4>A freelance cook's dream.</h4>
+    <GridLayout />
+</div>
 </>
 
-
-export default HomePage
+export default withStyles(styles)(OrderPage)

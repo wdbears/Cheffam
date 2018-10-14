@@ -8,6 +8,7 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 const styles = {
     row: {
       display: 'flex',
+      align: 'center',
       justifyContent: 'center',
     }
   };

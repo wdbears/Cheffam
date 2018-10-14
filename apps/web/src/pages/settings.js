@@ -1,12 +1,19 @@
 import React from "react"
 import Avatar from "../components/Avatar";
 import Profile from "../components/Profile";
+import { withStyles } from '@material-ui/core/styles';
 import SettingsList from "../components/SettingsList";
-import Toggle from "../components/Toggle";
+import Toggle from "../components/ChefModeToggle";
 
+const styles = {
+    page: {
+        display: 'flex',
+        justifyContent: 'center'
+      }
+    }
 
 const SettingsPage = ({classes}) => (
-    <div className="pageContainer">
+    <div className="classes.page">
     <>
         <Avatar />
         <Profile />
@@ -16,4 +23,4 @@ const SettingsPage = ({classes}) => (
     </div>
 )
 
-export default (SettingsPage);
+export default withStyles(styles)(SettingsPage);
