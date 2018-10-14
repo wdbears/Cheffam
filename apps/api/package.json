@@ -23,7 +23,9 @@
     "predev": "rm -rf ./node_modules/.cache/babel-loader",
     "dev": "backpack",
     "build": "backpack build",
-    "start": "node .",
-    "i": "lerna add --scope=@cheffam/api"
+    "start": "node build/main.js",
+    "i": "lerna add --scope=@cheffam/api",
+    "predeploy": "yarn build",
+    "deploy": "gcloud app deploy"
   }
 }
