@@ -1,9 +1,17 @@
 import React from "react"
 import { Switch, Route } from "react-router"
 import HomePage from "./home"
+import OrderPage from "./orders"
+import ProfilePage from "./profile"
+import Search from "./search"
+import ChefProfile from "./chef-profile"
 
 export default () => (
   <Switch>
-    <Route path="/" component={HomePage} />
+    <Route path="/" exact component={HomePage} />
+    <Route path="/orders" component={OrderPage} />
+    <Route path="/profile" component={ProfilePage} />
+    <Route path="/search" component={Search} />
+    <Route path="/chef-profile" component={ChefProfile} />
   </Switch>
 )
