@@ -10,7 +10,8 @@ const styles = {
         paddingTop: 30
       },
       chefToggle: {
-          paddingTop:300
+          paddingTop:30,
+          textAlign:'center'
       }
     }
 
@@ -19,8 +20,10 @@ const ProfilePage = ({classes}) => (
     <>
         <Avatar />
         <ProfileName />
-        <SettingsList className={classes.chefToggle} />
+        <SettingsList />
+        <div className={classes.chefToggle}>
         <Toggle />
+        </div>
     </>
     </div>
 )

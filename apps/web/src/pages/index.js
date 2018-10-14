@@ -4,7 +4,7 @@ import HomePage from "./home"
 import OrderPage from "./orders"
 import ProfilePage from "./profile"
 import Search from "./search"
-import ChefProfile from "./chef-profile"
+import ChefProfile from "./chefProfile"
 
 export default () => (
   <Switch>
@@ -12,6 +12,6 @@ export default () => (
     <Route path="/orders" component={OrderPage} />
     <Route path="/profile" component={ProfilePage} />
     <Route path="/search" component={Search} />
-    <Route path="/chef-profile" component={ChefProfile} />
+    <Route path="/chefProfile" component={ChefProfile} />
   </Switch>
 )
