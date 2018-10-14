@@ -10,26 +10,28 @@ import BottomNav from '../components/BottomNav';
 const client = initApollo()
 
 const styles = {
-  app: {paddingTop: 20, position: 'relative'},
-  navbar: {bottom:0},
-  
+  app: {display: 'flex', minHeight: '100vh', flexDirection: 'column'},
+  navbar: { flex: 1 }
 }
 
 class App extends Component {
   render() {
     return (
       <div className={this.props.classes.app}>
+        <header></header>
+        {console.log(this.props.classes)}
+        <main className={this.props.classes.navbar}>
         <ApolloProvider client={client}>
-          <Router>
-            <>  {/* React fragment used for storing multiple components */}
-            <CssBaseline />
-            <Pages />
-            <div className={this.props.classes.wrapper}>
+          <Router className="wrapper">
+              <>  {/* React fragment used for storing multiple components */}
+              <CssBaseline />
+              <Pages />
+              </>
+            </Router>
+        </ApolloProvider></main>
+        <footer>
               <BottomNav className={this.props.classes.navbar}/>
-            </div>
-            </>
-          </Router>
-        </ApolloProvider>
+            </footer>
       </div>
     )
   }
