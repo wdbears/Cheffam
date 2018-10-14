@@ -6,7 +6,7 @@ const styles = {
     greeting: {textAlign: 'center'},
 }
 
-const OrderPage = ({ classes }) => <>
+const HomePage = ({ classes }) => <>
 <div className={classes.greeting}>
     <h1>Welcome to Cheffam</h1>
     <h4>A freelance cook's dream.</h4>
@@ -16,4 +16,4 @@ const OrderPage = ({ classes }) => <>
 </div>
 </>
 
-export default withStyles(styles)(OrderPage)
+export default withStyles(styles)(HomePage)
