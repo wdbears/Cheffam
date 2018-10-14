@@ -8,6 +8,9 @@
     },
     {
       "path": "apps/web"
+    },
+    {
+      "path": "apps/data_scraper"
     }
   ],
   "settings": {

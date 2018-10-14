@@ -1,0 +1,25 @@
+type Dish {
+    id: ID!
+    name: String!
+    price: Float!
+    calories: Int!
+    description: String!
+    pictureURL: String
+}
+
+type Menu{
+    id: ID!
+    dishes: [Dish]!
+}
+
+type FoodCategories{
+    id: ID!
+    chefs: [User]!
+    name: String!
+}
+
+type Query{
+    allDishes: [Dish]!
+    allMenus: [Menu]!
+    allCategories: [FoodCategories]!
+}

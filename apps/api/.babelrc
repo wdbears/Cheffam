@@ -1,0 +1,9 @@
+{
+    "presets": [
+        "backpack-core/babel"
+    ],
+    "plugins": [
+        "import-graphql",
+        "inline-dotenv"
+    ]
+}
