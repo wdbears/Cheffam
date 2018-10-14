@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "firstName": "Marta",
+        "lastName": "Rahman",
+        "fudieRating": "4.95",
+        "chefRating": "4.98",
+        "isChef": "true",
+        "blurb": ""
+    },
+    {
+        "id": "2",
+        "firstName": "Martin",
+        "lastName": "Hernandez",
+        "fudieRating": "4.82",
+        "chefRating": "4.92",
+        "isChef": "true",
+        "blurb": ""
+    },
+    {
+        "id": "3",
+        "firstName": "Emily",
+        "lastName": "Zhu",
+        "fudieRating": "4.96",
+        "chefRating": "4.99",
+        "isChef": "true",
+        "blurb": ""
+    }
+]
