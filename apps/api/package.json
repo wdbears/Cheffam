@@ -1,0 +1,22 @@
+{
+  "name": "@cheffam/api",
+  "version": "0.0.1",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.1.0",
+    "backpack-core": "^0.8.0-0",
+    "nodemon": "^1.18.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "graphql-yoga": "^1.16.2"
+  },
+  "scripts": {
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node ./dist/server.js",
+    "prod": "npm run build && npm run start",
+    "i": "lerna add --scope=@cheffam/api"
+  }
+}

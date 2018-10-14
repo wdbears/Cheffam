@@ -1,8 +1,14 @@
-# RAMEN 🍲 Stack
+# Cheffam
 
-## The tools of the trade:
-- *R*: React
-- *A*: Apollo
-- *M*: Mongo
-- *E*: Express
-- *N*: Node
+# ToDo:
+
+## Client
+
+- [ ] Integrate `apollo-client` (chore)
+- [ ] Integrate `material-ui` (chore)
+- [ ] Get offline working properly (feature)
+
+## Api
+
+- [ ] Setup MongoDB using `apollo-connector-mongodb` (chore)
+- [ ] Integrate Auth0 (chore)
