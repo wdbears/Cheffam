@@ -11,11 +11,11 @@ import Typography from "@material-ui/core/Typography"
 const styles = {
   card: {
     maxWidth: 345,
+    minWidth: 250,
     margin: 50,
-    opacity: 0.875
     },
   media: {
-    height: 140
+    height: 150
   },
   cardTitle: {
     color: 'white',
@@ -27,7 +27,7 @@ const styles = {
 function MediaCard({ classes, imgSrc, textSrc }) {
   return (
     <Card className={classes.card}>
-      <CardActionArea style={{ width: "100%" }}>
+      <CardActionArea style={{ width: "100%", backgroundColor: 'rgba(0,0,0,.6)'}}>
         <CardMedia
           className={classes.media}
           style={{ display: "flex", justifyContent: "center" }}
