@@ -1,5 +1,7 @@
-import testDef from "./test.graphql"
+import foodDef from "./food.graphql"
+import userDef from "./user.graphql"
 
 export default [
-    testDef
+    userDef,
+    foodDef
 ]
