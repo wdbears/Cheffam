@@ -10,7 +10,7 @@ As far as pricing goes, chefs can price their products the way they see fit.
 
 Cheffam is meant to drive community engagement up with the concept of followings. Each chef has a following that users can choose to back. The bigger the following, the more popular the chef. This allows local chefs to more easily gain recognition for their talents while having a steady flow of income.
 
-# ToDo:
+# To-Do:
 
 ## Client
 
